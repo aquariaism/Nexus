@@ -1,0 +1,144 @@
+.about-section{
+    padding: 70px 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+
+.about-left{
+    flex: 1;
+}
+
+.about-tag{
+    color: #70809b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.about-left h2{
+    margin-top: 22px;
+    margin-bottom: 32px;
+    font-size: 74px;
+    line-height: 1.08;
+    letter-spacing: -4px;
+    color: #08122f;
+}
+
+.about-left p{
+    color: #5d6b84;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 24px;
+}
+
+.about-features{
+    display: flex;
+    gap: 28px;
+    margin-top: 42px;
+}
+
+.feature-box{
+    width: 220px;
+    padding: 30px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #dbe0e8;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.feature-box h3{
+    font-size: 42px;
+    color: #08122f;
+    margin-bottom: 12px;
+}
+
+.feature-box span{
+    color: #6f7f99;
+    font-size: 15px;
+}
+
+.about-right{
+    flex: 1;
+}
+
+.about-right img{
+    width: 100%;
+    height: 760px;
+    object-fit: cover;
+    border-radius: 34px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+@media(max-width:1400px){
+    .about-section{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:900px){
+    .about-section{
+        padding: 90px 24px;
+    }
+    .about-left h2{
+        font-size: 54px;
+    }
+    .about-right img{
+        height: 500px;
+    }
+    .about-features{
+        flex-direction: column;
+    }
+    .feature-box{
+        width: 100%;
+    }
+}
+
+@media(max-width:600px){
+
+    .about-section{
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .about-left{
+        text-align: center;
+    }
+
+    .about-left h2{
+        font-size: 42px;
+        line-height: 1.1;
+        letter-spacing: -2px;
+        margin-bottom: 20px;
+    }
+
+    .about-left p{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .about-features{
+        gap: 15px;
+    }
+
+    .feature-box{
+        padding: 20px;
+    }
+
+    .feature-box h3{
+        font-size: 32px;
+    }
+
+    .feature-box span{
+        font-size: 13px;
+    }
+
+    .about-right img{
+        width: 100%;
+        aspect-ratio: 4/5;
+        height: auto;
+        object-fit: cover;
+        border-radius: 24px;
+    }
+}

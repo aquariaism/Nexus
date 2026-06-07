@@ -1,0 +1,141 @@
+.add-event-btn{
+    height: 52px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 14px;
+    background: #07122f;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.event-modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.event-modal-box{
+    width: 520px;
+    background: white;
+    border-radius: 30px;
+    padding: 36px;
+}
+
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+.modal-top h2{
+    font-size: 34px;
+    color: #07122f;
+}
+
+.modal-top button{
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #eef1f5;
+    cursor: pointer;
+}
+
+#eventForm{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#eventForm input{
+    width: 100%;
+    height: 58px;
+    border-radius: 14px;
+    border: 1px solid #dce1ea;
+    padding: 0 18px;
+    outline: none;
+}
+
+#eventCategory{
+    width: 100%;
+    height: 64px;
+    border: 1px solid #d9dde7;
+    border-radius: 18px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: white;
+    color: #07122f;
+    outline: none;
+    transition: 0.3s;
+}
+
+#eventCategory:focus{
+
+    border-color: #07122f;
+}
+
+#eventForm button{
+    height: 58px;
+    border: none;
+    border-radius: 14px;
+    background: #07122f;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#eventDescription{
+    width: 100%;
+    min-height: 120px;
+    padding: 18px 20px;
+    border: 1px solid #d9dde7;
+    border-radius: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s;
+}
+
+#eventDescription:focus{
+    border-color: #0b1b53;
+}
+
+
+
+@media(max-width:600px){
+
+    .event-modal-box{
+        width:95%;
+        padding:24px;
+    }
+
+    .modal-top h2{
+        font-size:24px;
+    }
+
+    .add-event-btn,
+    .dashboard-btn{
+        padding: 8px 12px;
+        font-size: 12px;
+        min-width: auto;
+    }
+}
+

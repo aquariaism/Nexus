@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="imgs/logo.jpg">
+    <link rel="stylesheet" href="css/01_style.css">
+    <link rel="stylesheet" href="css/02_discover.css">
+    <link rel="stylesheet" href="css/03_registered.css">
+    <link rel="stylesheet" href="css/04_about.css">
+    <link rel="stylesheet" href="css/05_footer.css">
+    <link rel="stylesheet" href="css/addEvent.css">
+    <link rel="stylesheet" href="css/filter_size.css">
+    <link rel="stylesheet" href="css/event_details.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/toast.css">
+</head>
+
+<body>
+    <div class="grid-bg" id="gridBg"></div>
+    <header class="navbar">
+        <div class="logo-section">
+            <div class="logo-box">
+                <div class="logo-shape"></div>
+            </div>
+            <h2>Nexus Campus</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#discover">Discover</a>
+            <a href="#about">About</a>
+            <a href="#registeredSection">Registered Events</a>
+        </nav>
+        <div class="nav-buttons" id="navButtons">
+            <a href="signin.html" class="sign-in-link">Sign In</a>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home">Home</a>
+
+        <a href="#discover">Discover</a>
+
+        <a href="#about">About</a>
+
+        <a href="#registeredSection">
+            Registered Events
+        </a>
+
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h1>Every campus <br> moment, <span>curated.</span> </h1>
+
+            <p>Nexus Campus is the calm, intelligent hub for college events.Discover hackathons, workshops, mixers and
+                culture nights —then book your seat in a single tap.</p>
+
+            <div class="hero-buttons">
+                <a href="#discover" class="hero-btn">Explore Events ↗</a>
+                <button class="host-btn">Host an Event</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>240+</h2>
+                    <span>LIVE EVENTS</span>
+                </div>
+                <div class="stat-box">
+                    <h2>32+</h2>
+                    <span>ASSOCIATIONS</span>
+                </div>
+                <div class="stat-box">
+                    <h2>18k</h2>
+                    <span>STUDENTS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="image-card">
+                <img id="heroSlider" src="imgs/uni.jpg" alt="Campus">
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCOVER SECTION -->
+
+    <section class="discover-section" id="discover">
+
+        <div class="discover-top">
+            <div class="discover-left">
+                <span class="discover-tag">DISCOVER</span>
+                <h2> What's happening on campus <br>this week.</h2>
+            </div>
+
+            <div class="discover-filters">
+                <button class="filter-btn active-filter" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+                <button class="filter-btn" data-filter="workshop">Workshop</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="culture">Culture</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+
+        <div class="events-grid">
+            <div class="event-large-card" data-category="hackathon" onclick='openDetailsModal({
+                category:"hackathon",
+                title:"Global Student Hackathon",
+                description:"Join us for the ultimate coding challenge! Participate in our global student hackathon and showcase your innovative solutions to real-world problems. Collaborate with fellow students, learn from industry mentors, and compete for exciting prizes. Whether you are a coding novice or a seasoned developer, this event is open to all skill levels. Dont miss this opportunity to connect, create, and innovate on a global stage!",
+                date:"Nov 12, 2026",
+                location:"Tech Hall",
+                totalSeats:999,
+                availableSeats:999,
+                image:"imgs/hackathon1.jpg"
+            })'>
+                <img src="imgs/hackathon1.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="event-badge">HACKATHON</div>
+                <div class="popular-badge">MOST POPULAR</div>
+                <div class="bookmark-btn">☆</div>
+                <div class="event-content">
+                    <h3>Global Student Hackathon</h3>
+                    <div class="event-meta">
+                        <span>📅 Nov 12, 2026</span>
+                        <span>📍 Tech Hall</span>
+                    </div>
+                    <div class="card-bottom">
+                        <p>OPEN FOR ALL</p>
+                        <button onclick='event.stopPropagation();openRegisterModal({ category:"hackathon",
+                            title:"Global Student Hackathon", date:"Nov 12, 2026",
+                            location:"Tech Hall", seats:"FOR ALL",
+                            image:"imgs/hackathon1.jpeg"
+                            })'> Reserve ↗
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-events-column">
+                <div class="small-event-card" data-category="workshop" onclick='openDetailsModal({
+                category:"workshop",
+                title:"Design Systems Workshop",
+                description:"Join us for an immersive workshop on design systems, where you will learn how to create cohesive and scalable          design frameworks that enhance user experience and streamline development processes.",
+                date:"Nov 15, 2026",
+                location:"Library Room 402",
+                totalSeats:40,
+                availableSeats:40,
+                image:"imgs/workshop1.jpg"
+                })'>
+                    <img src="imgs/workshop1.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="event-badge">WORKSHOP</div>
+                    <div class="bookmark-btn">☆</div>
+                    <div class="small-event-content">
+                        <h3>Design Systems Workshop</h3>
+                        <div class="event-meta">
+                            <span>📅 Nov 15, 2026</span>
+                            <span>📍 Library Room 402</span>
+                        </div>
+                        <div class="card-bottom">
+                            <!-- <p id="designSeats">40 SEATS</p> -->
+                            <p id="designSeats"></p>
+                            <button onclick='event.stopPropagation();openRegisterModal({ category:"workshop",
+                                title:"Design Systems Workshop", date:"Nov 15, 2026",
+                                location:"Library Room 402",totalSeats: 40,availableSeats: 40,
+                                image:"imgs/workshop1.jpg"
+                                })'> Reserve ↗
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="small-event-card" data-category="networking" onclick='openDetailsModal({
+                category:"networking",
+                title:"Startup Mixer",
+                description:"Connect with fellow entrepreneurs, investors, and industry professionals at our networking event. Share your ideas, build valuable connections, and explore new opportunities for collaboration and growth.",
+                date:"Nov 18, 2026",
+                location:"Innovation Cafe",
+                totalSeats:80,
+                availableSeats:80,
+                image:"imgs/networks1.jpg"
+                })'>
+                    <img src="imgs/networks1.jpg" alt="">
+                    <div class="overlay"></div>
+                    <div class="event-badge">NETWORKING</div>
+                    <div class="bookmark-btn">☆</div>
+                    <div class="small-event-content">
+                        <h3>Startup Mixer</h3>
+                        <div class="event-meta">
+                            <span>📅 Nov 18, 2026</span>
+                            <span>📍 Innovation Cafe</span>
+                        </div>
+                        <div class="card-bottom">
+                            <p id="startupSeats"></p>
+                            <button onclick='event.stopPropagation();openRegisterModal({ category:"networking",
+                                title:"Startup Mixer", date:"Nov 18, 2026",
+                                location:"Innovation Cafe", totalSeats: 80, availableSeats: 80,
+                                image:"imgs/networks1.jpg"
+                                })'> Reserve ↗
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-events" id="bottomEvents"></div>
+        <div class="dynamic-events" id="dynamicEvents"></div>
+    </section>
+
+    <!-- REGISTERED EVENTS SECTION -->
+    <section class="registered-section" id="registeredSection">
+        <div class="section-heading">
+            <span>REGISTERED EVENTS</span>
+            <h2>Your Registered Events</h2>
+        </div>
+        <div class="registered-events" id="registeredEvents">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+        <div class="about-left">
+            <span class="about-tag">ABOUT NEXUS CAMPUS</span>
+            <h2>Designed for <br>modern campus life.</h2>
+
+            <p>Nexus Campus is a modern event management platform built to simplify how students discover, explore, and
+                participate in college events. From technical hackathons and coding contests to sports tournaments,
+                cultural festivals, workshops, and networking sessions — everything is organized into one beautiful
+                experience.</p>
+
+            <p>Our goal is to create a smarter, calmer, and more connected campus environment where students never
+                missopportunities to learn, connect, and grow.</p>
+
+            <div class="about-features">
+                <div class="feature-box">
+                    <h3>240+</h3>
+                    <span>Events Managed</span>
+                </div>
+                <div class="feature-box">
+                    <h3>18k</h3>
+                    <span>Students Connected</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-right">
+            <img src="imgs/campus.webp" alt="Nexus Campus">
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <div class="footer-logo-box">
+                    <div class="footer-logo-shape"></div>
+                </div>
+                <h2>Nexus Campus</h2>
+            </div>
+
+            <p>The calm, intelligent hub for college events.<br>Built by students, for students.</p>
+
+            <div class="footer-socials">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt=""></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt=""></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt=""></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <span>EXPLORE</span>
+                <a href="#discover">All Events</a>
+                <a href="#discover">Hackathons</a>
+                <a href="#discover">Cultural Events</a>
+                <a href="#discover">Sports</a>
+            </div>
+            <div class="footer-column">
+                <span>ACCOUNT</span>
+                <a href="signin.html">Sign In</a>
+                <a href="signin.html">Sign Up</a>
+                <a href="#registeredSection">Registered Events</a>
+            </div>
+            <div class="footer-column">
+                <span>PLATFORM</span>
+                <a href="#about">About</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#footer">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EVENT ADD FORM -->
+    <div class="event-modal" id="eventModal">
+        <div class="event-modal-box">
+            <div class="modal-top">
+                <h2>Add New Event</h2>
+                <button id="closeModal">✕</button>
+            </div>
+            <form id="eventForm">
+                <input type="text" id="eventTitle" placeholder="Event Title" required>
+                <select id="eventCategory" required>
+                    <option value="">Select Category</option>
+                    <option>Hackathon</option>
+                    <option>Workshop</option>
+                    <option>Sports</option>
+                    <option>Culture</option>
+                    <option>Networking</option>
+                </select>
+                <input type="date" id="eventDate" placeholder="Date" required>
+                <textarea id="eventDescription" placeholder="Event Description" required></textarea>
+                <input type="text" id="eventLocation" placeholder="Location" required>
+                <input type="text" id="eventSeats" placeholder="Seats" required>
+                <input type="text" id="eventImage" placeholder="Image URL" required>
+                <button type="submit">Publish Event</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- REGISTER YOURSELF FOR AN EVENT  -->
+    <div class="register-modal" id="registerModal">
+        <div class="register-box">
+            <button class="close-register" id="closeRegisterModal">✕</button>
+            <h2>Event Registration</h2>
+            <form id="registerForm">
+                <input type="text" id="studentName" placeholder="Your Name" required>
+                <input type="email" id="studentEmail" placeholder="Your Email" required>
+                <input type="text" id="studentDepartment" placeholder="Department" required>
+                <button type="submit">Confirm Registration</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- EVENT DETAILS MODAL -->
+
+    <div class="event-details-modal" id="eventDetailsModal">
+        <div class="event-details-box">
+            <span id="closeDetailsModal">&times;</span>
+            <img id="detailImage" src="" alt="">
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription"></p>
+            <div class="detail-info">
+                <p>📅 <span id="detailDate"></span></p>
+                <p>📍 <span id="detailLocation"></span></p>
+                <p>🎟 Seats Left:
+                    <span id="detailSeats"></span>
+                </p>
+            </div>
+            <button id="detailRegisterBtn">
+                Register Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Dashboard Admin -->
+    <div class="dashboard-modal" id="dashboardModal">
+
+        <div class="dashboard-box">
+
+            <div class="dashboard-header">
+
+                <h2>Admin Dashboard</h2>
+
+                <button id="closeDashboard" class="dashboard-close">×</button>
+
+            </div>
+
+            <div class="dashboard-stats">
+
+                <div class="dashboard-card">
+                    <h3 id="totalEvents">0</h3>
+                    <span>Total Events</span>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3 id="totalRegistrations">0</h3>
+                    <span>Registrations</span>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3 id="upcomingEvents">0</h3>
+                    <span>Upcoming Events</span>
+                </div>
+
+            </div>
+
+            <div id="dashboardEventList"></div>
+        </div>
+    </div>
+    <div id="toastContainer"></div>
+    <script src="js/toast.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

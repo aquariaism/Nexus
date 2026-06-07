@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Nexus Campus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/toast.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-left">
+            <span class="auth-tag">NEXUS CAMPUS</span>
+            <h1>Create your <br>student account.</h1>
+            <p>Join the modern campus event ecosystem and discover amazing experiences.</p>
+        </div>
+
+        <div class="auth-card">
+            <h2>Sign Up</h2>
+             <form id="signupForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <select id="role" required>
+                    <option value="">Choose Role</option>
+                    <option value="Student">Student</option>
+                    <option value="Event Host">Event Host</option>
+                </select>
+                <button type="submit">Create Account</button>
+            </form>
+            <p class="switch-auth">Already have an account?<a href="signin.html">Sign In</a></p>
+        </div>
+    </div>
+    <div id="toastContainer"></div>
+    <script src="js/toast.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
